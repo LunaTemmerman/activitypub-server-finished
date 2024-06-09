@@ -1,0 +1,30 @@
+{
+    "message":"Request failed with status code 404",
+    "name":"AxiosError",
+    "stack":"AxiosError: Request failed with status code 404\n    at settle (file:///C:/Users/lunat/Documents/School/Web%20Topics%20Advanced/2024-wta-lunatemmerman/activitypub/activitypub-server-finished/node_modules/axios/lib/core/settle.js:19:12)\n    at Unzip.handleStreamEnd (file:///C:/Users/lunat/Documents/School/Web%20Topics%20Advanced/2024-wta-lunatemmerman/activitypub/activitypub-server-finished/node_modules/axios/lib/adapters/http.js:589:11)\n    at Unzip.emit (node:events:531:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (file:///C:/Users/lunat/Documents/School/Web%20Topics%20Advanced/2024-wta-lunatemmerman/activitypub/activitypub-server-finished/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async file:///C:/Users/lunat/Documents/School/Web%20Topics%20Advanced/2024-wta-lunatemmerman/activitypub/activitypub-server-finished/routes/discover.js:17:31",
+    "config":{
+        "transitional":{
+            "silentJSONParsing":true,
+            "forcedJSONParsing":true,
+            "clarifyTimeoutError":false
+        },
+        "adapter":["xhr","http","fetch"],
+        "transformRequest":[null],
+        "transformResponse":[null],
+        "timeout":0,
+        "xsrfCookieName":"XSRF-TOKEN",
+        "xsrfHeaderName":"X-XSRF-TOKEN",
+        "maxContentLength":-1,
+        "maxBodyLength":-1,
+        "env":{},
+        "headers":{
+            "Accept":"application/json, text/plain, */*",
+            "User-Agent":"axios/1.7.2",
+            "Accept-Encoding":"gzip, compress, deflate, br"
+        },
+        "method":"get",
+        "url":"https://activitypub.academy/.well-known/webfinger?resource=acct:doesnotexist@activitypub.academy"
+    },
+    "code":"ERR_BAD_REQUEST",
+    "status":404
+}
