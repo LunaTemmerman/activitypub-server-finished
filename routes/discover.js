@@ -4,9 +4,9 @@ const router = Router();
 
 router.get("/:term", async (req, res) => {
   const {term} = req.params;
-  console.log(term);
 
   const [username, platform] = term.split("@");
+  console.log("plaform: " + platform);
 
   if (!username || !platform) {
     return res

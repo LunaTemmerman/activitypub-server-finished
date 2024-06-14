@@ -12,10 +12,9 @@ async function parseUser(resource) {
 }
 
 async function parsePlatform(resource) {
-  if (resource.indexOf(":") > -1 && resource.indexOf("@") > -1) {
-    const parts = resource.split(":");
-    const platform = parts[1].split("@")[1];
-
+  const resourceMatch = resource.match(/acct:([^@]+)@([^:]+(:\d+)?)/);
+  if (resourceMatch) {
+    const platform = resourceMatch[2];
     return platform;
   } else {
     return null;

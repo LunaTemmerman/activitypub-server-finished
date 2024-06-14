@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 
     const platform = await parsePlatform(resource);
     const username = await parseUser(resource);
-    console.log(resource);
+    console.log(resource, platform, username);
 
     if (!username) {
       return res
@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
         .send({errors: ["Invalid Request: Platform not found"]});
     }
 
-    if (platform === process.env.BASE_URL) {
+    if (`http://${platform}` === process.env.BASE_URL) {
       const user = await User.findOne({preferredUsername: username});
       if (!user) {
         return res.status(404).send({errors: ["User not found"]});

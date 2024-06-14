@@ -276,6 +276,8 @@ router.post("/:username/outbox", verifyToken, async (req, res) => {
       return res.status(400).send({errors: ["Unsupported activity type"]});
     }
 
+    activityDocument["@context"] = "https://www.w3.org/ns/activitystreams";
+
     const {deliveryPromises, error} = deliverActivity(activityDocument);
     if (error) {
       return res.status(error.code).send({errors: [error.message]});
